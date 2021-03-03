@@ -1,0 +1,21 @@
+<%- include("partials/header") -%>
+
+<div class="sponcers_div">
+<h1 class="sonsers-title"><u><b>Our Sponcers</b></u></h1>
+<div class="container">
+  <div class="row">
+    <% sponsers.forEach(function(item) { %>
+      <div class="col-lg-4">
+        <div class="container-sponser">
+          <img src="data:image/<%=item.img.contentType%>;base64,
+                           <%=item.img.data.toString('base64')%>" class="image" alt="error">
+          <h2 class="sponser-text-size"><%=item.name%></h2>
+            </div>
+          </div>
+    <% }); %>
+
+  </div>
+</div>
+</div>
+
+<%- include("partials/footer") -%>

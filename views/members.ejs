@@ -1,0 +1,28 @@
+<%- include("partials/header") -%>
+
+
+<h1><u><b>Our Experts</b></u></h1>
+<div class="container">
+  <div class="row">
+    <% members.forEach(function(image) { %>
+      <div class="col-lg-4">
+        <div class="container-member">
+          <img src="data:image/<%=image.img.contentType%>;base64,
+                           <%=image.img.data.toString('base64')%>" class="image" alt="error">
+          <div class="overlay">
+            <div class="text">
+              <h2 class="text-size"><%=image.name%></h2>
+              <div class="member_detail_div">
+                <p class="text-size"><%=image.department%></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <% }) %>
+
+  </div>
+</div>
+
+<%- include("partials/footer") -%>

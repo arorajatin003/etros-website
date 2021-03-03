@@ -1,0 +1,76 @@
+<%- include("partials/header") -%>
+
+  <div id="root">
+
+  </div>
+<div class="front-page">
+  <h1 class="title" >Welcome.</h1>
+  <h1 class="title" >To new-age designs,</h1>
+  <h1 class="title" >advanced technologies</h1>
+  <h1 class="title" >and thoughtfully designed experiences.</h1>
+
+</div>
+    <hr>
+    <div class="about-us-front">
+      <h1 class="about-us-title">About Us</h1>
+      <div class="container about-us-content">
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="images/ESRLOGO.png"  class="about-us-img" alt="logo">
+          </div>
+          <div class="col-lg-6">
+            <h4 class="about-us-heading">Design, Innovate, Build the future!</h4>
+            <p class="about-us-text">
+              ETROS SOLAREON RACING is the official solar racing team of SRM INSTITUTE OF SCIENCE AND TECHNOLOGY, Chennai, Tamil Nadu. Electric Solar Vehicle Championship 2020 will be the third time we are taking part in the particular event. With the goal of designing and fabricating an efficient solar car, we promise to deliver our best in the making of the vehicle. With students from various departments like Mechanical Engineering, Electrical and Electronics Engineering, Automobile Engineering, Mechatronics Engineering, Electronics and Communication Engineering and Computer Science Engineering, we strive to combine our talent and ideas to build a potent solar electric vehicle. With the clear mindset of giving our best, we are looking forward to head to the event with full confidence and an efficient yet commercially viable solar electric vehicle. Through this process, we are aiming to make use of renewable energy sources instead of fossil fuels for the working of a car and understand how it can implemented so that eventually, all the cars running on the road will be revamped to not make use of fossil fuels, to aid in reducing pollution hence, improving the environmental conditions.
+             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <hr>
+    <h1 class="notice-title">Latest updates</h1>
+    <div class="container">
+      <div class="row">
+        <%  for(var i=(posts.length-2);i<posts.length;i++){ %>
+          <div class="col-lg-4">
+            <div class="container-notice ">
+              <a href="<%=posts[i].link%>">
+                <img src="data:image/<%=posts[i].img.contentType%>;base64,
+                                <%=posts[i].img.data.toString('base64')%>" class="image-notice" alt="error">
+                <div class="overlay-notice">
+                  <div class="text">
+                    <h2><%= posts[i].title %> </h2>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        <%  } %>
+        <div class="col-lg-4">
+          <a href="/notice">
+            <div class="container-notice ">
+              <img src="images/img_avatar.png" class="image-notice" alt="error">
+              <div class="overlay-notice">
+                <div class="text">
+                  <h2>More</h2>
+
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <div class="help-section">
+      <h1 class="help-us-title">Help Us</h1>
+      <p class="help-us-text">A small contribution made by you will help us alot.</p>
+      <button class="btn" type="button" name="button">DONATE US</button>  
+    </div>
+
+<%- include("partials/footer") -%>

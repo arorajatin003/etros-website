@@ -1,0 +1,295 @@
+body{
+  text-align: center;
+  margin: 0;
+  background-color: black;
+  color:white;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+hr{
+  border: dotted 7px;
+	border-color: #6c757d;
+	/* width: 5% : */
+  max-width: 5%;
+
+	border-bottom: none;
+	margin: 100px auto;
+}
+i{
+  font-size: 5rem;
+}
+
+/* nav bar */
+.custom-nav{
+  padding: 0 10%;
+}
+
+.logo{
+  max-width: 200px;
+  max-height: 200px;
+  margin: 0 ;
+}
+.inLine{
+  display: inline-block;
+  font-size: 1.2rem;
+  padding-right: 10px;
+}
+
+
+/* front page */
+
+
+.title{
+  font-weight: bold;
+  font-size: 2.9rem;
+
+}
+.front-page{
+  background-size:auto;
+  text-align: left;
+  padding: 10% 20%;
+  background-color: black;
+  background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+}
+
+
+/* about us section */
+.about-us-content{
+  padding-top: 50px;
+}
+
+.about-us-title{
+  font-weight: lighter;
+}
+.about-us-img{
+
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.about-us-heading{
+  font-weight: bolder;
+  padding-bottom: 20px;
+  font-size: 3rem;
+}
+
+.about-us-text{
+  font-size: 1.2rem;
+  text-align: left;
+  line-height: 1.5;
+}
+
+/* notice sextion  */
+.notice-title{
+  font-weight: bold;
+  font-size: 2rem;
+
+}
+.container-notice {
+  position: relative;
+  width: 20rem;
+  margin: 50px auto;
+}
+
+.image-notice {
+  border-color: #acdbdf;
+  width: 20rem;
+  height: 10rem;
+  max-width: 20rem;
+  max-height: 10rem;
+}
+
+.overlay-notice {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #343a40;
+  overflow: hidden;
+  width: 100%;
+  max-width: 20rem;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container-notice:hover .overlay-notice {
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap;
+  color: #f0ece2;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+/* help section */
+.help-section{
+  background-image: url("/images/group_pic.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  /* width: 500px;
+  height: 100%; */
+
+}
+.help-us-title{
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding-top: 10px;
+  line-height: 1;
+}
+.help-us-text{
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  margin-bottom:2px;
+  background: #11CDD4;
+  background-image: -webkit-linear-gradient(top, #11CDD4, #11999e);
+  background-image: -moz-linear-gradient(top, #11CDD4, #11999e);
+  background-image: -ms-linear-gradient(top, #11CDD4, #11999e);
+  background-image: -o-linear-gradient(top, #11CDD4, #11999e);
+  background-image: linear-gradient(to bottom, #11CDD4, #11999e);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: #ffffff;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin: 30px auto;
+}
+
+.btn:hover {
+  background: #30e3cb;
+  background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+  text-decoration: none;
+}
+
+/* anoutus page  */
+
+.aboutUs{
+  text-align: left;
+  padding: 3% 5%;
+  line-height: 2;
+  font-size: 1.2em;
+}
+
+/* contactUs page */
+
+.contactUs{
+  text-align: left;
+  padding: 3% 10%;
+
+}
+
+
+/* members page */
+
+/* .members_div{
+  text-align: left;
+  padding: 3% 10%;
+
+} */
+.member_detail_div{
+  padding: 0 1%;
+  font-size: 1em;
+}
+
+.container-member {
+  position: relative;
+  width: 20rem;
+  margin:50px auto;
+}
+
+.image {
+  width: 20rem;
+  height: 20rem;
+  max-width: 20rem;
+  max-height: 20rem;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #343a40;
+  overflow: hidden;
+  width: 100%;
+  max-width: 20rem;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container-member:hover .overlay {
+  height: 40%;
+}
+
+.text {
+  white-space: nowrap;
+  text-align: center;
+  color: #f0ece2;
+  font-size: 18px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+/* sponsers page */
+
+.sponser-title{
+  margin-bottom: 2rem;
+}
+
+.sponcers_div{
+  text-align: left;
+  padding: 3% 10%;
+
+  font-size: 1em;
+
+}
+
+.footer{
+  position: relative;
+  bottom: 0;
+  background-color: #343a40;
+  color: #f0ece2;
+  padding: 10px ;
+}
+.footer-link{
+  color: #f0ece2;
+}
+.footer-link:hover{
+  color: #6c757d;
+}
+
+/* new members page */
+
+.newInput{
+  padding: 1% 15%;
+  text-align: left;
+  line-height: 2;
+}
+.new-member-lable{
+  font-size: 1.2em;
+  line-height: 2.5;
+}

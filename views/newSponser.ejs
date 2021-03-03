@@ -1,0 +1,22 @@
+<%- include("partials/header") -%>
+
+<div class="newInput">
+  <h1>WOOHOO we got a new Sponser</h1>
+  <form class="newSponserForm" action="/new-sponser-123" method="post" enctype="multipart/form-data">
+    <label for="name">Name: </label>
+    <input type="text" name="name" value="" placeholder="abc"><br>
+
+    <label for="sponsered">Sponcered: </label>
+    <input type="text" name="sponsered" value="" placeholder="abc"><br>
+
+    <label for="amount">Amount: </label>
+    <input type="text" name="amount" value="" placeholder="abc"><br>
+
+    <label for="image" class="new-member-lable">Photo: </label>
+    <input type="file" id="image" name="image" value="" required><br>
+
+    <input class="btn" type="submit">
+  </form>
+</div>
+
+<%- include("partials/footer") -%>

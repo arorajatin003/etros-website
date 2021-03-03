@@ -1,0 +1,24 @@
+<%- include("partials/header") -%>
+
+
+<div class="newNote">
+  <h1>WOOHOO we got a new post</h1>
+  <form class="newNoteForm" action="/new-notice-123" method="post" enctype="multipart/form-data">
+    <label for="title" class="new-member-lable">Title: </label>
+    <input type="text" name="title" value="" placeholder="eg: Title"><br>
+
+    <label for="body" class="new-member-lable">Body: </label>
+    <input type="text" name="content" value="" placeholder="eg: It is a body"><br>
+
+    <label for="link" class="new-member-lable">Link: </label>
+    <input type="text" name="link" value="" placeholder="Give compleat link"><br>
+
+    <label for="image" class="new-member-lable">Photo: </label>
+    <input type="file" id="image" name="image" value="" required><br>
+
+    <input class="btn"type="submit">
+  </form>
+
+</div>
+
+<%- include("partials/footer") -%>

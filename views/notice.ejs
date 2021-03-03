@@ -1,0 +1,25 @@
+<%- include("partials/header") -%>
+
+<h1 class="notice-title">Latest updates</h1>
+<div class="container">
+  <div class="row">
+    <% posts.forEach(function(post){ %>
+      <a href="/notice/<%= post.title %>">
+      <div class="col-lg-4">
+        <div class="container-notice ">
+          <img src="data:image/<%=post.img.contentType%>;base64,
+                           <%=post.img.data.toString('base64')%>" class="image-notice" alt="error">
+          <div class="overlay-notice">
+            <div class="text">
+              <h2><%= post.title %> </h2>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      </a>
+    <%  }); %>
+    </div>
+</div>
+
+<%- include("partials/footer") -%>
