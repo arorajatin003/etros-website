@@ -7,7 +7,7 @@ const path = require("path");
 const multer = require('multer');
 require('dotenv/config');
 const imgModel = require('./model');
-const noteModel = require("./notice");
+const noteimages = require("./notice");
 const sponModel = require("./sponser");
 
 const app = express();
@@ -16,8 +16,8 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/etrosDB", {useNewUrlParser: true});
-
+mongoose.connect("mongodb+srv://Jatin-arora-admin:Jatinarora003@cluster0.osicw.mongodb.net/etrosDB", {useNewUrlParser: true,useUnifiedTopology: true});
+// mongodb://localhost:27017/
 
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -51,7 +51,7 @@ var sUplode = multer({storage: sStorage});
 
 
 app.get("/",function(req,res){
-  noteModel.find({},function(err,posts){
+  noteimages.find({},function(err,posts){
     res.render("index",{
       posts: posts
     });
@@ -90,7 +90,7 @@ app.get("/contactus",function(req,res){
 });
 
 app.get("/notice",function(req,res){
-  noteModel.find({},function(err,post){
+  noteimages.find({},function(err,post){
     res.render("notice",{
       posts: post
     });
@@ -99,12 +99,12 @@ app.get("/notice",function(req,res){
 app.get("/notice/:title",function(req,res){
   var query = {title:req.params.title};
   console.log(query);
-  noteModel.find({title:req.params.title},function(err,posts){
+  noteimages.find({title:req.params.title},function(err,posts){
     res.render("post",{
       post:posts
     });
   });
-  // noteModel.forEach(function(post){
+  // noteimages.forEach(function(post){
   //   console.log(req.params.title);
   //   if(post.title === req.params.title){
   //     res.render("post",{
@@ -119,7 +119,7 @@ app.get("/new-notice-123",function(req,res){
   res.render("newNote");
 });
 app.post("/new-notice-123",nuplode.single('image'), (req,res,next)=>{
-  var note= new noteModel({
+  var note= new noteimages({
     title: req.body.title,
     body: req.body.content,
     link: req.body.link,
@@ -178,7 +178,7 @@ app.post("/new-sponser-123", sUplode.single('image'), (req, res, next) =>{
   })
 });
 
-
-app.listen(3000, function(){
+var port = process.env.PORT || 3000
+app.listen(port, function(){
   console.log("Server is liatening on port 3000");
 });
