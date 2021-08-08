@@ -4,6 +4,8 @@ body{
   background-color: black;
   color:white;
   font-family: 'Josefin Sans', sans-serif;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 hr{
@@ -23,7 +25,10 @@ i{
 .custom-nav{
   padding: 0 10%;
 }
-
+.navbar-nav>.active>a {
+  background-color: #C0C0C0;
+  color: green;
+}
 .logo{
   max-width: 200px;
   max-height: 200px;
@@ -293,3 +298,19 @@ i{
   font-size: 1.2em;
   line-height: 2.5;
 }
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+  ::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+  ::-webkit-scrollbar-thumb {
+  background: #888; 
+    border-radius:5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  
+  background: #555; 
+} 
