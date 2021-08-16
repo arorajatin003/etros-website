@@ -24,6 +24,10 @@ i{
 /* nav bar */
 .custom-nav{
   padding: 0 10%;
+  /* position: fixed;
+  z-index: 1;
+  margin-bottom: 5%;
+  background-color: black; */
 }
 .navbar-nav>.active>a {
   background-color: #C0C0C0;
@@ -52,10 +56,11 @@ i{
 .front-page{
   background-size:auto;
   text-align: left;
-  padding: 10% 20%;
+  padding: 10% 10%;
   background-color: black;
   background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
 }
+
 
 
 /* about us section */
@@ -314,3 +319,15 @@ i{
   
   background: #555; 
 } 
+
+
+
+/* Media query */
+
+@media only screen and (max-width: 800px){
+  .front-page{
+    padding: 100% 20% !important;
+    background-size:cover;
+    font-size: 20px;
+  }
+}
