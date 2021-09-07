@@ -16,9 +16,12 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+
+
 mongoose.connect("mongodb://localhost:27017/etros_newDB", {useNewUrlParser: true,useUnifiedTopology: true});
 // mongodb://localhost:27017/
 // mongodb+srv://Jatin-arora-admin:Jatinarora003@cluster0.osicw.mongodb.net/etrosDB
+
 
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {

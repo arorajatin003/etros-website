@@ -11,63 +11,69 @@
 
 </div>
     <hr>
-    <div class="about-us-front">
-      <h1 class="about-us-title">About Us</h1>
-      <div class="container about-us-content">
-        <div class="row">
-          <div class="col-lg-6">
-            <img src="images/ESRLOGO.png"  class="about-us-img" alt="logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#00A1FF" fill-opacity="1" d="M0,128L60,144C120,160,240,192,360,218.7C480,245,600,267,720,245.3C840,224,960,160,1080,133.3C1200,107,1320,117,1380,122.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+    </svg>
+    <!-- 3dbae0 -->
+    <div class="about-us-front" id="aboutus">
+      <h1 class="about-us-title">ABOUT US</h1>
+      <div class="container ">
+        <div class="row about-us-content">
+          <div class="col-lg-6 about-us-img-div">
+            <!-- <div class="boder-image"> -->
+              <img src="images/image.jpg"  class="about-us-img" alt="logo">
+            <!-- </div> -->
           </div>
-          <div class="col-lg-6">
-            <h4 class="about-us-heading">Design, Innovate, Build the future!</h4>
+          <div class="col-lg-6 about-us-text">
+          <h4 class="about-us-heading">Design, Innovate, Build the future!</h4>
+          <!-- <b class="ludwig" style="line-height: 40px;">Design, Innovate, Build the future!</b> -->
             <p class="about-us-text">
-              ETROS SOLAREON RACING is the official solar racing team of SRM INSTITUTE OF SCIENCE AND TECHNOLOGY, Chennai, Tamil Nadu. Electric Solar Vehicle Championship 2020 will be the third time we are taking part in the particular event. With the goal of designing and fabricating an efficient solar car, we promise to deliver our best in the making of the vehicle. With students from various departments like Mechanical Engineering, Electrical and Electronics Engineering, Automobile Engineering, Mechatronics Engineering, Electronics and Communication Engineering and Computer Science Engineering, we strive to combine our talent and ideas to build a potent solar electric vehicle. With the clear mindset of giving our best, we are looking forward to head to the event with full confidence and an efficient yet commercially viable solar electric vehicle. Through this process, we are aiming to make use of renewable energy sources instead of fossil fuels for the working of a car and understand how it can implemented so that eventually, all the cars running on the road will be revamped to not make use of fossil fuels, to aid in reducing pollution hence, improving the environmental conditions.
+              ETROS SOLAREON RACING is the official solar racing team of SRM INSTITUTE OF SCIENCE AND TECHNOLOGY, Chennai, Tamil Nadu. With the goal of designing and fabricating an efficient solar car, we promise to deliver our best in the making of the vehicle. With students from various departments like Mechanical Engineering, Electrical and Electronics Engineering, Automobile Engineering, Mechatronics Engineering, Electronics and Communication Engineering and Computer Science Engineering, we strive to combine our talent and ideas to build a potent solar electric vehicle. <a class="about-us-text-link" href="/aboutus">...learn more</a>
              </p>
           </div>
         </div>
       </div>
     </div>
-
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#00A1FF" fill-opacity="1" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,69.3C1200,53,1320,43,1380,37.3L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+    </svg>
 
     <hr>
-    <h1 class="notice-title">Latest updates</h1>
-    <div class="container">
-      <div class="row">
+    
+    <div class="notice">      
+      <h1 class="notice-title">Latest updates</h1>
+      <div class="notices-div">
         <%  for(var i=(posts.length-2);i<posts.length;i++){ %>
-          <div class="col-lg-4">
+          <!-- <div class="col-lg-1"> -->
+          <a href=<%=posts[i].link%>>
             <div class="container-notice ">
-              
-              <a href="<%=posts[i].link%>">
-
+              <div class="image-notice-div">
                 <img src="data:image/<%=posts[i].img.contentType%>;base64,
-                                <%=posts[i].img.data.toString('base64')%>" class="image-notice" alt="error">
-                <div class="overlay-notice">
-                  <div class="text">
-                    <h2><%= posts[i].title %> </h2>
-
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-        <%  } %>
-        <div class="col-lg-4">
-          <a href="/notice">
-            <div class="container-notice ">
-              <img src="images/img_avatar.png" class="image-notice" alt="error">
-              <div class="overlay-notice">
-                <div class="text">
-                  <h2>More</h2>
-
-                </div>
+                <%=posts[i].img.data.toString('base64')%>" class="image-notice" alt="error" />
+              </div>
+              <!-- <h1>Hi</h1> -->
+              <div class="notice-text">
+                <h4><%= posts[i].title %></h4>
+                <p><%= posts[i].body %> </p>
               </div>
             </div>
           </a>
-        </div>
+          <!-- </div> -->
+        <%  } %>
+          <a href="/notice">
+            <div class="container-notice">
+              <div class="image-notice-div">
+                <img src="images/img_avatar.png" class="image-notice" alt="error" />
+              </div>
+              <div class="notice-text">
+                <h2>More</h2>
+              </div>
+            </div>
+          </a>
       </div>
     </div>
-
+   
+    
     <hr>
     <div class="help-section">
       <h1 class="help-us-title">Help Us</h1>
