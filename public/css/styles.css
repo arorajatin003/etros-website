@@ -3,6 +3,7 @@ body{
   margin: 0;
   background-color: black;
   color:white;
+
   font-family: 'Poppins','Josefin Sans', sans-serif;
 }
 
@@ -22,9 +23,19 @@ i{
 /* nav bar */
 .custom-nav{
   padding: 0 10%;
-  /* position: fixed; */
-}
 
+  /* position: fixed; */
+
+  /* position: fixed;
+  z-index: 1;
+  margin-bottom: 5%;
+  background-color: black; */
+}
+.navbar-nav>.active>a {
+  background-color: #C0C0C0;
+  color: green;
+
+}
 .logo{
   max-width: 200px;
   max-height: 200px;
@@ -72,10 +83,13 @@ i{
 .front-page{
   background-size:auto;
   text-align: left;
+
   padding: 10% 25% 10% 15%;
+
   background-color: black;
   background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
 }
+
 
 
 /* ---------------------------about us section ---------------------------------*/
@@ -83,6 +97,10 @@ i{
   background-color: #00A1FF;
   color: rgb(0, 0, 0);
 }
+
+
+/* about us section */
+
 .about-us-content{
   padding-top: 50px;
   display: flex !important;
@@ -534,6 +552,7 @@ svg{
 }
 
 
+
 /* media Queries */
 
 @media screen and (max-width:800px) {
@@ -684,4 +703,19 @@ svg{
     width: 100%;
   }
   
+
+::-webkit-scrollbar {
+  width: 5px;
 }
+  ::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+  ::-webkit-scrollbar-thumb {
+  background: #888; 
+    border-radius:5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  
+  background: #555; 
+} 
+
